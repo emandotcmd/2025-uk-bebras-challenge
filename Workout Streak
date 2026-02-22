@@ -1,0 +1,41 @@
+namespace Workout_Streak
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            string[] parts = input.Split(' ');
+
+            int[] numbers = new int[parts.Length];
+
+            for (int i = 0; i < parts.Length; i++)
+            {
+                numbers[i] = Convert.ToInt32(parts[i]);
+            }
+
+            int currentStreak = 1;
+            int longestStreak = 1;
+
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i] >= numbers[i - 1])
+                {
+                    currentStreak++;
+                }
+                else
+                {
+                    currentStreak = 1;
+                }
+
+                if (currentStreak > longestStreak)
+                {
+                    longestStreak = currentStreak;
+                }
+            }
+
+            Console.WriteLine(longestStreak);
+
+        }
+    }
+}
