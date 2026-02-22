@@ -25,10 +25,6 @@ namespace Show_Time
                 }
             }
             Console.WriteLine(longestStreak);
-
-
-
-
         }
     }
 }
