@@ -1,0 +1,27 @@
+namespace Sum_of_Even_Numbers
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            string[] parts = input.Split(' ');
+
+            int start = Convert.ToInt32(parts[0]);
+            int end = Convert.ToInt32(parts[1]);
+
+            int total = 0;
+
+            for (int i = start; i <= end; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    total += i;
+                }
+            }
+
+            Console.WriteLine(total);
+
+        }
+    }
+}
