@@ -1,0 +1,24 @@
+namespace Discount_Phones
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int numOfPhones;
+            int onePhoneCost = 300;
+            int totalCost;
+
+            Console.WriteLine("How many phones are being bought");
+            numOfPhones = Convert.ToInt32(Console.ReadLine());
+
+            totalCost = onePhoneCost * numOfPhones;
+
+            if (numOfPhones > 5)
+            {
+                int discount = (numOfPhones / 5) * 50;
+                totalCost = totalCost - discount;
+                Console.WriteLine(totalCost);
+            }
+        }
+    }
+}
